@@ -1,0 +1,21 @@
+[package]
+name = "fake-data-generator"
+description = "fake-data-generator is a flexible and customizable tool that generates fake data"
+version = "0.0.1"
+authors = ["Wojciech Wilk <w.wilk@metasoftworks.com>"]
+edition = "2021"
+readme = "README.md"
+homepage = "https://github.com/Galhad/fake-data-generator"
+repository = "https://github.com/Galhad/fake-data-generator"
+license = "MIT"
+
+[dependencies]
+clap = { version = "3.1.8", optional = true, default-features = false }
+#env_logger = { version = "0.9.0"}
+
+[features]
+bin = ["clap/derive", "clap/std"]
+
+[[bin]]
+name = "fdg"
+required-features = ["bin"]
